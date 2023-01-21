@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+<title>Rajarshi Dutta</title>
+
+<!-- <style>
+    .resume .resume-item::before {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50px;
+        left: -9px;
+        top: 0;
+        background: #fff;
+        border: 2px solid #1f5297;
+    }
+    .resume{
+      padding: 20px;
+    }
+</style> -->
+
+{% endblock %}
+
+
+{% load static %}
+
+{% block body %}
+
+<main id="main">
+  <section id="resume" class="resume">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Resume</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6" data-aos="fade-up">
+
+          <h3 class="resume-title">Education</h3>
+          <div class="resume-item">
+            <h4>Bachelor of Technology </h4>
+            <h5 style="background: #e4edf9; display: inline-block;">2017 - 2021</h5>
+            <p style="padding: 10px 0px;"><em><i>University of Engineering &amp; Management, Kolkata </i> </em></p>
+            <p>Completed B. Tech in Computer Science and Engineering from
+              University of Engineering and Management with 7.5 DGPA.</p>
+          </div>
+          <div class="resume-item">
+            <h4>Higher Secondary </h4>
+            <h5 style="background: #e4edf9; display: inline-block;">2014 - 2017</h5>
+            <p style="padding: 10px 0px;"><em><i>Kalyannagar Vidyapith, Khardah </i> </em></p>
+            <p>Passed Higher Secondary education from West Bengal Council of
+              Higher Secondary Education with 69.2% marks.</p>
+          </div>
+          <div class="resume-item">
+            <h4>Secondary </h4>
+            <h5 style="background: #e4edf9; display: inline-block;">2013 - 2014</h5>
+            <p style="padding: 10px 0px;"><em><i>Sodepur High School, Sodepur </i> </em></p>
+            <p>Passed Secondary education from West Bengal Board of Secondary
+              Education with 75.14% marks.</p>
+          </div>
+        </div>
+
+
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="resume-title">Professional Experience</h3>
+          <div class="resume-item">
+            <h4>Software Developer Trainee</h4>
+            <h5>Nov 2021 - Mar 2022</h5>
+            <p><em>White Net Group, Noida </em></p>
+            <ul>
+              <li>Design and Develop a time tracking website using
+                HTML, CSS, Bootstrap, Python(Django), and
+                JavaScript, which can track every single moment of an
+                employee.</li>
+              <li>Design a Placement Training website using HTML, CSS,
+                and jQuery.
+              </li>
+              <li>Develop an email sending program that can fetch data
+                from excel sheets and send emails.</li>
+            </ul>
+          </div>
+
+          <div class="resume-item">
+            <h4>Python Developer</h4>
+            <h5>Oct 2022 - Nov 2022</h5>
+            <p><em>ForFirm CS LLP, Indore </em></p>
+            <ul>
+              <li>Worked on the backend of an API project named VareseNext using the Django framework in Python.</li>
+            </ul>
+          </div>
+
+          <div class="resume-item">
+            <h4>Manager - IN/VAS</h4>
+            <h5>Nov 2022 - Present</h5>
+            <p><em>Vodafone Idea Limited, Kolkata </em></p>
+            <ul>
+              <li>Manage the entire pre-paid system and value-added service for the Kolkata cluster.</li>
+              <li>Maintain all the Nodes of Hardware like CCN, AIR, CSNMT, SDP, etc, for the entire eastern circle.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Resume Section -->
+
+  </div>
+  </div>
+  </section>
+
+</main>
+
+{% endblock %}
