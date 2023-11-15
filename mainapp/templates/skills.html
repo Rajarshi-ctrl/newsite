@@ -1,60 +1,123 @@
 {% extends "layout.html" %}
 
-{% block title %} <title>Rajarshi Dutta</title> 
+{% block title %} <title>Rajarshi Dutta</title>
 
 <style>
-    .progress{
-        padding: 10px;
-    }
+  .progress {
+    padding: 10px;
+  }
 </style>
+
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
 {% endblock %}
 
-  
+
 {% load static %}
-  
+
 {% block body %}
 
 <main id="main">
 
-<!-- ======= Skills Section ======= -->
-<section id="skills" class="skills section-bg">
+  <!-- ======= Skills Section ======= -->
+  <section id="skills" class="skills section-bg" style="background: white;">
     <div class="container">
+
 
       <div class="section-title">
         <h2>Skills</h2>
-        <p>Innovative, detail-oriented, Software Engineer, has experience in developing new programs and websites for multiple operating systems. Good commands of computer architecture, operating systems, programming languages and data structures. Hard working and good team worker with track record of optimizing product development cycle. </p>
+        <p>Innovative, detail-oriented, Software Engineer, has experience in developing new programs and websites for multiple operating systems. Good commands of computer architecture, operating systems, programming languages and data structures. I have earned a dew general skills by learning and completing some courses. Those are Data Scraping, Data Mining, Data Analysis, Data Visualization, Machine Learning, etc. Also there are some Hard skills and Soft skills mentioned below.</p>
       </div>
 
       <div class="row skills-content">
 
         <div class="col-lg-6" data-aos="fade-up">
 
-          <div class="progress">
+
+          <div id="myPlot" style="width:100%;max-width:700px"></div>
+
+          <script>
+            const xArray = [6,8,8,6,5,5,7,7,9];
+            const yArray = ["html, css, js ", "DataBase ", "django, flask", "matplotlib", "seaborn", "sklearn", "pandas", "numpy", "Python"];
+
+            const data = [{
+              x:xArray,
+              y:yArray,
+              type:"bar",
+              orientation:"h",
+              marker: {color:"rgba(255,0,0,0.6)"}
+            }];
+
+            const layout = {title:"Hard Skills"};
+
+            Plotly.newPlot("myPlot", data, layout);
+          </script>
+
+
+          <div id="myChart" style="width:100%; max-width:600px; height:500px;">
+          </div>
+
+          <script>
+          google.charts.load('current', {'packages':['corechart']});
+          google.charts.setOnLoadCallback(drawChart);
+
+          function drawChart() {
+
+          // Set Data
+          const data = google.visualization.arrayToDataTable([
+            ['Contry', 'Mhl'],
+            ['Time Management',100],
+            ['Flexibility',100],
+            ['Quick Learner',100],
+            ['Communication',100],
+            ['Problem Solving',100]
+          ]);
+
+          // Set Options
+          const options = {
+            title:'Soft Skills',
+            is3D:true
+          };
+
+          // Draw
+          const chart = new google.visualization.PieChart(document.getElementById('myChart'));
+          chart.draw(data, options);
+
+          }
+          </script>
+
+
+          <!-- <div class="progress">
             <span class="skill">HTML </span>
             <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+              </div>
             </div>
           </div>
 
           <div class="progress">
             <span class="skill">CSS </span>
             <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+              </div>
             </div>
           </div>
 
           <div class="progress">
             <span class="skill">JavaScript, C, Java </span>
             <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+              </div>
             </div>
           </div>
 
           <div class="progress">
             <span class="skill">Bootstrap </span>
             <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+              </div>
             </div>
           </div>
 
@@ -65,32 +128,36 @@
           <div class="progress">
             <span class="skill">Python </span>
             <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
+              </div>
             </div>
           </div>
 
           <div class="progress">
             <span class="skill">Django / Flask </span>
             <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+              </div>
             </div>
           </div>
 
           <div class="progress">
             <span class="skill">MySQL, PostgreSQL </span>
             <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+              </div>
             </div>
           </div>
 
           <div class="progress">
             <span class="skill">Windows, Linux </span>
             <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+              </div>
             </div>
-          </div>
+          </div> -->
 
-        </div>
+        </div> 
 
       </div>
 
