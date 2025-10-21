@@ -98,4 +98,4 @@ This project is licensed under the MIT License - feel free to use this code for 
 
 ---
 
-**Developed by Rajarshi Dutta** | [GitHub](https://github.com/Rajarshi-ctrl) | [Live Site](https://drajarshi.vercel.app)
+**Developed by Rajarshi Dutta** | [GitHub](https://github.com/Rajarshi-ctrl) | [Live Site](https://rajarshi.vercel.app/)
